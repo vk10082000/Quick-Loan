@@ -1,4 +1,5 @@
 {
+
   "users": [
     {
       "id": 1,
@@ -31,7 +32,9 @@
       "category": "homeloan"
     }
   ],
-  "banks":[
+  
+ "banks":[
+
     {
       "id": 1,
       "name": "Bajaj Finserv",
