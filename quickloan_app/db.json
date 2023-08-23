@@ -1,8 +1,204 @@
 {
- "users":[
-  {
-  
-  }
- ],
- "banks":[{}]
+  "users": [
+    {
+      "id": 1,
+      "fullname": "Nitesh Chandrakar",
+      "image": "",
+      "email": "niteshchandrakar2@gmail.com",
+      "password": "123abc",
+      "contact": 9754601089,
+      "address": "Bilaspur , Chhattisgarh",
+      "employment": "student",
+      "income": 35000,
+      "creditscore": 730,
+      "loans": []
+    },
+    {
+      "firstname": "Anburaj",
+      "lastname": "S",
+      "email": "anburaj2203@gmail.com",
+      "password": "Anburaj@2203",
+      "loans": [],
+      "id": 2,
+      "fullname": "Anburaj S",
+      "address": "fdsafds",
+      "contact": "08778118819",
+      "gender": "male",
+      "dob": "0222-02-22",
+      "employment": "self-employed",
+      "income": "medium",
+      "creditscore": "7000",
+      "category": "homeloan"
+    }
+  ],
+  "banks":[
+    {
+      "id": 1,
+      "name": "Bajaj Finserv",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/61.gif",
+      "amount": 567098,
+      "interest": 12,
+      "category": "homeloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "HDFC Bank",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/2.gif",
+      "amount": 678098,
+      "interest": 13,
+      "category": "homeloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Axis Bank",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/27.gif",
+      "amount": 456333,
+      "interest": 14,
+      "category": "homeloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Muthoot Finance",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/93.gif",
+      "amount": 456333,
+      "interest": 14,
+      "category": "homeloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 5,
+      "name": "PaySense",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/266.gif",
+      "amount": 456333,
+      "interest": 14,
+      "category": "educationloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Kotak Bank",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/17.gif",
+      "amount": 456333,
+      "interest": 14,
+      "category": "educationloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 7,
+      "name": "IDFC Bank",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/247.gif",
+      "amount": 456333,
+      "interest": 14,
+      "category": "educationloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Tata Capital",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/247.gif",
+      "amount": 456333,
+      "interest": 14,
+      "category": "educationloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Axis Bank",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/27.gif",
+      "amount": 95733,
+      "interest": 16,
+      "category": "personalloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Muthoot Finance",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/93.gif",
+      "amount": 456333,
+      "interest": 14,
+      "category": "personalloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 11,
+      "name": "PaySense",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/266.gif",
+      "amount": 456333,
+      "interest": 14,
+      "category": "personalloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Kotak Bank",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/17.gif",
+      "amount": 456333,
+      "interest": 14,
+      "category": "personalloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Bajaj Finserv",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/61.gif",
+      "amount": 567098,
+      "interest": 12,
+      "category": "businessloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    },
+    {
+      "id": 14,
+      "name": "HDFC Bank",
+      "image": "https://personalloan.paisabazaar.com/components/images/bank-new-logos/2.gif",
+      "amount": 678098,
+      "interest": 13,
+      "category": "businessloan",
+      "extra": [
+        "For Tenure up to 18 months - Foreclosure after 6 EMI payments.",
+        "For Tenure of more than 18 months - Foreclosure after 12 EMI payments."
+      ]
+    }
+  ]
 }
