@@ -2,17 +2,17 @@
   "users": [
     {
       "id": 1,
-      "fullname": "Nitesh Chandrakar",
+      "fullname": "Vamshi Krishna",
       "image": "",
-      "email": "niteshchandrakar2@gmail.com",
-      "password": "123abc",
+      "email": "vk123@gmail.com",
+      "password": "vk@1234",
       "contact": 9754601089,
-      "address": "Bilaspur , Chhattisgarh",
+      "address": "KTL , Telangana",
       "employment": "student",
       "income": 35000,
-      "creditscore": 730,
+      "creditscore": 680,
       "loans": []
-    },
+      },
     {
       "firstname": "Anburaj",
       "lastname": "S",
