@@ -181,7 +181,7 @@ input::placeholder {
 
 
   select {
-    width: 100%;
+    width: 90%;
     padding: 1rem;
     border-radius: 4px;
     border: none;
