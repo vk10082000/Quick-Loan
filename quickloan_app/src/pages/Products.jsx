@@ -1,7 +1,24 @@
-import React from 'react'
+import styled from 'styled-components'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getproducts } from '../redux/ProductRedux/action'
+import ProductCard from '../components/ProductCard'
 
 export default function Products() {
+const {products,isLoading,isError} = useSelector((store)=> store.ProductReducer)
+const dispatch = useDispatch()
+useEffect(()=>{
+dispatch(getproducts)
+},[])
   return (
-    <div>Products</div>
+      <DIV>
+        {isLoading && <h1>Loading...</h1>}
+        {isError && <h1>Something Wents to Wroung</h1>}
+        {products.map((product)=><ProductCard key={product.id} {...product} />)}
+    </DIV>
   )
 }
+
+const DIV = styled.div`
+  
+`

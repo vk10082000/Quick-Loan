@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 
-export const getPosts = (dispatch) => {
+export const getproducts = (dispatch) => {
 
     dispatch({ type: PRODUCT_REQUEST })
 

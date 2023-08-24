@@ -1,20 +1,40 @@
 {
- "users":[
+
+  "users": [
     {
-        "id": 1,
-        "fullname": "Vamshi Krishna",
-        "image": "",
-        "email": "vk123@gmail.com",
-        "password": "vk@1234",
-        "contact": 9754601089,
-        "address": "KTL , Telangana",
-        "employment": "student",
-        "income": 35000,
-        "creditscore": 680,
-        "loans": []
-      }
- ],
+      "id": 1,
+      "fullname": "Vamshi Krishna",
+      "image": "",
+      "email": "vk123@gmail.com",
+      "password": "vk@1234",
+      "contact": 9754601089,
+      "address": "KTL , Telangana",
+      "employment": "student",
+      "income": 35000,
+      "creditscore": 680,
+      "loans": []
+      },
+    {
+      "firstname": "Anburaj",
+      "lastname": "S",
+      "email": "anburaj2203@gmail.com",
+      "password": "Anburaj@2203",
+      "loans": [],
+      "id": 2,
+      "fullname": "Anburaj S",
+      "address": "fdsafds",
+      "contact": "08778118819",
+      "gender": "male",
+      "dob": "0222-02-22",
+      "employment": "self-employed",
+      "income": "medium",
+      "creditscore": "7000",
+      "category": "homeloan"
+    }
+  ],
+  
  "banks":[
+
     {
       "id": 1,
       "name": "Bajaj Finserv",
