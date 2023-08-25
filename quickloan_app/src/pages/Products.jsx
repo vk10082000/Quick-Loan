@@ -5,7 +5,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getproducts } from '../redux/ProductRedux/action'
 import ProductCard from '../components/ProductCard'
 
+
 import { SimpleGrid } from '@chakra-ui/react'
+
 
 
 export default function Products() {
@@ -15,6 +17,8 @@ export default function Products() {
     dispatch(getproducts)
   }, [])
   return (
+
+      
     <DIV>
 
       {isLoading && <h1>Loading...</h1>}
@@ -23,6 +27,7 @@ export default function Products() {
       {products.map((product) => <ProductCard key={product.id} {...product} />)}
 
       </SimpleGrid>
+
 
     </DIV>
   )
