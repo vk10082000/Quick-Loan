@@ -8,12 +8,12 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 
 export default function Application() {
-//   const { id } = useSelector((store) => {
-//     console.log('store:', store)
-//     return {
-//       id: store.authReducer.currentUser.id,
-//     }
-//   })
+  const { id } = useSelector((store) => {
+    console.log('store:', store)
+    return {
+      id: store.AuthReducer.currentUser.id,
+    }
+  })
   // console.log("======", id);
 
   const initalFormData={
@@ -31,9 +31,14 @@ export default function Application() {
   const [formData, setFormData] = useState(initalFormData);
 
   const [currentPart, setCurrentPart] = useState(1);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const {value,name,type}=e.target;
+    setFormData(prev=>{
+      return {...prev,[name]:
+        type==="tel" ? +value: type==="number"? Number(value) : value}
+  });
   };
 
   const handleNext = () => {
@@ -49,7 +54,7 @@ export default function Application() {
     try {
       // Make a PATCH request using axios
       const response = await axios.patch(
-        `http://localhost:8080/users/2`,        // id should come inplace of 2
+        `https://sour-snowy-purpose.glitch.me/users/${2}`,        // id should come inplace of 2
         formData
       );
       console.log(response.data);
@@ -60,20 +65,19 @@ export default function Application() {
         showConfirmButton: false,
         timer: 1500
       })
-      // Reset form data if needed
+      navigate("/products");
+      // Reset form data
       setFormData(initalFormData);
     } catch (error) {
       console.error(error);
     }
   };
 
-  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.creditscore >= 650) {
-      handleSubmitFormData();
-    //   navigate("/products");
+      handleSubmitFormData();      
     } else {
       Swal.fire({
         icon: 'error',
@@ -199,7 +203,7 @@ export default function Application() {
                       onChange={handleChange}
                       required
                     >
-                      <option value="">Select Category</option>
+                      <option value="">Select Category of Loan</option>
                       <option value="homeloan">Home loan</option>
                       <option value="educationloan">Education loan</option>
                       <option value="personalloan">Personal loan</option>
