@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getproducts } from '../redux/ProductRedux/action'
 import ProductCard from '../components/ProductCard'
-import {Navbar} from "../components/Navbar"
+import Navbar from "../components/Navbar"
 export default function Products() {
 const {products,isLoading,isError} = useSelector((store)=> store.ProductReducer)
 const dispatch = useDispatch()
