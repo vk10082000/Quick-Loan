@@ -5,34 +5,16 @@ import {
     HStack,
     Flex,
     Image,
-    Drawer,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerHeader,
-    DrawerBody,
-    useDisclosure,
-    DrawerCloseButton,
-    Input,
-    DrawerFooter,
-    List,
-    ListItem,
-    ListIcon,
-    OrderedList,
-    UnorderedList,
-    Avatar,
-    Menu,
-    MenuItem,
-    MenuButton,
-    MenuList,
-    Spacer,
+ 
+   
   } from "@chakra-ui/react";
-import logo_jpg from "../Images/logo.jpg"
+import logo_jpg from "../Images/1.jpg"
 import { Link, NavLink } from 'react-router-dom';
 // import { Box,Flex,Spacer,Button,Heading, ButtonGroup} from '@chakra-ui/react'
 
 const links = [
     { title: "Home", path: "/" },
-    { title: "Product", path: "/Product" },
+    { title: "Product", path: "/products" },
     { title: "Company", path: "/process" },
     { title: "Support", path: "/support" },
   ];
@@ -86,7 +68,7 @@ const Navbar = () => {
         xl: "180px",
       }}
     >
-      <Link to="/"><Image sizes='s' src={logo_jpg} alt="logo" h="100px" w="100%" p="10%" /></Link>
+      <Link to="/"><Image sizes='s' src={logo_jpg} alt="logo" h="70px" w="90px" p="-10px" /></Link>
     </Box>
     <HStack
       justify={"space-evenly"}
@@ -120,7 +102,7 @@ const Navbar = () => {
             <Link to="/signup">
               <Button
                 size={{ base: "sm", sm: "sm", md: "md", lg: "md", xl: "md" }}
-                colorScheme={"pink"}
+                colorScheme={"yellow"}
               >
                 Sign Up
               </Button>
