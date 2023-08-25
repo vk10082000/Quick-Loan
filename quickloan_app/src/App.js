@@ -11,10 +11,6 @@ function App() {
     <div className="App">
 
       <Navbar/>
-
-
-      <Application/>
-
       <MainRoutes/>
 
     </div>

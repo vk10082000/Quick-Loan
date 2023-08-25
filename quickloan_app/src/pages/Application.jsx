@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../CSS/Form.module.css";
 import offer from "../Images/offer2.jpg";
+import offer2 from "../Images/quick_loan.png"
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useSelector } from 'react-redux';
@@ -89,6 +90,7 @@ export default function Application() {
       <div className={styles.container}>
         <div className={styles["image-section"]}>
           <div className={styles["image-container"]}>
+            <div id={styles["offer2"]}> <img src={offer2} alt=""/> </div>
             <img
             src="https://img.freepik.com/premium-photo/portrait-happy-indian-asian-young-family-while-sitting-sofa-lying-floor-sitting-against-wall_466689-7294.jpg?size=626&ext=jpg&ga=GA1.1.107694881.1686996804&semt=ais"
               alt="Image"
