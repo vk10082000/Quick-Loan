@@ -54,7 +54,10 @@ export default function Application() {
     try {
       // Make a PATCH request using axios
       const response = await axios.patch(
+
         `https://sour-snowy-purpose.glitch.me/users/${2}`,        // id should come inplace of 2
+
+
         formData
       );
       console.log(response.data);
