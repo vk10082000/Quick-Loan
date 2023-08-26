@@ -208,7 +208,7 @@ input::placeholder {
     color: #333;
     position: relative;
     z-index: 1;
-    height: 50px;
+    height: 53px;
   }
   
   /* Custom arrow icon for select elements */
@@ -332,5 +332,8 @@ input::placeholder {
   .form-content {
     padding: 1rem;
     max-width: 100%;
+  }
+  .button-container button {
+    padding: 1rem;
   }
 }
