@@ -10,6 +10,7 @@ import Navbar from "../components/Navbar"
 
 
 import { SimpleGrid } from '@chakra-ui/react'
+import { useParams } from 'react-router-dom';
 
 
 
@@ -17,8 +18,10 @@ import { SimpleGrid } from '@chakra-ui/react'
 export default function Products() {
   const { products, isLoading, isError } = useSelector((store) => store.ProductReducer)
   const dispatch = useDispatch()
+  const { category } = useParams();
+  //console.log("vk",category)
   useEffect(() => {
-    dispatch(getproducts)
+    dispatch(getproducts(category))
   }, [])
   return (
 
