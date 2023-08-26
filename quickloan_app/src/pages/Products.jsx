@@ -5,8 +5,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getproducts } from '../redux/ProductRedux/action'
 import ProductCard from '../components/ProductCard'
 
+import Navbar from "../components/Navbar"
+
+
 
 import { SimpleGrid } from '@chakra-ui/react'
+
 
 
 
