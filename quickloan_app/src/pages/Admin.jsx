@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import {Table,Thead,Tbody,Tfoot,Tr,Th,Td,Select,TableContainer,Button,Box,
   Center} from "@chakra-ui/react";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
-// import { getAllUsers } from "../Redux/BankApplication/action";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { getUsersAction } from "../redux/AdminRedux/action";
@@ -30,6 +29,7 @@ const handleLoans=(id)=>{
     console.log('filterData', filterData)
     setLoan(filterData[0].loans);
     setLoanData(false)
+    setPid(id);
 }
 
 const [loanStatuses, setLoanStatuses] = useState([]);
@@ -68,7 +68,7 @@ const handleUpdateStatus = (id) => {
   };
   setData(updatedLoanData);
   // API call to update the data on the server.
-  fetch(`https://money-mentor.onrender.com/LoginUsers/${pId}`, {
+  fetch(`https://sour-snowy-purpose.glitch.me/LoginUsers/${pId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
