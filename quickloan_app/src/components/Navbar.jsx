@@ -14,7 +14,10 @@ import { Link, NavLink } from 'react-router-dom';
 
 const links = [
     { title: "Home", path: "/" },
-    { title: "Product", path: "/products" },
+
+
+    { title: "Product", path: "/verification" },
+
     { title: "Company", path: "/process" },
     { title: "Support", path: "/support" },
   ];

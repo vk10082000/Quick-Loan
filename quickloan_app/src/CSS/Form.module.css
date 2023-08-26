@@ -1,0 +1,339 @@
+/* Form.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  padding: 2rem;
+}
+#offer2{
+  width: 100%;
+  /* border: 1px solid red; */
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  /* padding: 30px; */
+}
+#offer2>img{
+  height: 50%;
+  border-radius: 20px;
+}
+.image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  animation: fadeIn 1s ease;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('path/to/your/image'); */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.image-container>img{
+    width: 100%;
+}
+
+.vl {
+  margin:3% 10% 0 2% ;
+  border-left: 1px solid lightgrey;
+  height: 100%;
+}
+
+/* .icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .icon-container img {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.icon-container img:hover {
+  opacity: 1;
+} */
+
+.form-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-content {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideInFromLeft 1s ease;
+  width: 100%;
+  max-width: 500px;
+}
+.form-content img{
+    width: 100%;
+    margin-top: 1.5rem ;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;  
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='number'] {
+  width: 90%;
+  padding: 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease;
+  /* height: 40px; */
+}
+input::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-container button {
+  padding: 1rem 2rem;
+  background-color: #7E57C2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  animation: fadeIn 1s ease;
+}
+
+.button-container button:hover {
+  background-color: #9575CD;
+}
+
+
+  .disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+
+  select {
+    width: 90%;
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+    /* appearance: none; Remove default arrow */
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    position: relative;
+    z-index: 1;
+    height: 53px;
+  }
+  
+  /* Custom arrow icon for select elements */
+  select::after {
+    content: '\f078'; /* FontAwesome chevron-down icon */
+    font-family: FontAwesome;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 0;
+    color: #777;
+  }
+  
+  /* Hover and Focus styles for select elements */
+  select:hover,
+  select:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+  
+  /* Disable default dropdown arrow in Chrome */
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select::-ms-expand {
+      display: none;
+    }
+  }
+
+  input[type='date'] {
+    width: 90%;
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    position: relative;
+    z-index: 1;
+    /* height: 40px; */
+  }
+  
+  /* Custom calendar icon for date input */
+  input[type='date']::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+  }
+  
+  /* Hover and Focus styles for calendar input */
+  input[type='date']:hover,
+  input[type='date']:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+  
+  /* Disable default calendar appearance in Firefox */
+  input[type='date']::-moz-calendar-picker-indicator {
+    display: none;
+  }
+  
+  /* Hide the arrow in IE */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    input[type='date']::-ms-clear {
+      display: none;
+    }
+  }
+
+  /* Tablet Version */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .image-section,
+  .form-section {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  .form-content {
+    padding: 1rem;
+    max-width: 100%;
+  }
+}
+
+/* Mobile Phone Version */
+@media (max-width: 576px) {
+  .container {
+    display: block;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .image-section,
+  .form-section {
+    max-width: 100%;
+  }
+
+  .image-container img {
+    width: 100%;
+  }
+
+  .vl {
+    display: none;
+  }
+
+  .form-content {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  .button-container button {
+    padding: 1rem;
+  }
+}

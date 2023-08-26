@@ -3,11 +3,11 @@ import axios from 'axios'
 
 
 
-export const getPosts = (dispatch) => {
+export const getproducts = (dispatch) => {
 
     dispatch({ type: PRODUCT_REQUEST })
 
-    axios.get(`http://localhost:8080/banks`).then((res) => {
+    axios.get(`https://sour-snowy-purpose.glitch.me/banks`).then((res) => {
 
         dispatch({ type: GET_PRODUCT_SUCCSES, payload: res.data })
 
@@ -18,7 +18,7 @@ export const getPosts = (dispatch) => {
 }
 export const postData = (newdata) => (dispatch) => {
     dispatch({ type: PRODUCT_REQUEST })
-    axios.post(`http://localhost:8080/banks`, newdata).then((res) => {
+    axios.post(`https://sour-snowy-purpose.glitch.me/banks`, newdata).then((res) => {
         //console.log(res.data);
         dispatch({ type: POST_PRODUCT_SUCCSES })
     }).catch((err) => {
@@ -27,7 +27,7 @@ export const postData = (newdata) => (dispatch) => {
 }
 export const Deletedata = (id) => (dispatch) => {
     dispatch({ type: PRODUCT_REQUEST })
-    return axios.delete(`http://localhost:8080/banks/${id}`).then((res) => {
+    return axios.delete(`https://sour-snowy-purpose.glitch.me/banks/${id}`).then((res) => {
         //console.log(res.data);
         dispatch({ type: DELETE_PRODUCT_SUCCSES })
 
