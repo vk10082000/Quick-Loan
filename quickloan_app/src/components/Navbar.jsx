@@ -68,7 +68,7 @@ const Navbar = () => {
         xl: "180px",
       }}
     >
-      <Link to="/"><Image sizes='s' src={logo_jpg} alt="logo" h="70px" w="90px" p="-10px" /></Link>
+      <Link to="/"><Image sizes='s'  borderRadius={"100%"} src={logo_jpg} alt="logo" h="70px" w="90px" p="-10px" /></Link>
     </Box>
     <HStack
       justify={"space-evenly"}
