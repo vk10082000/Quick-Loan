@@ -3,11 +3,11 @@ import axios from 'axios'
 
 
 
-export const getproducts = (dispatch) => {
+export const getproducts = (data)=>(dispatch) => {
 
     dispatch({ type: PRODUCT_REQUEST })
 
-    axios.get(`https://sour-snowy-purpose.glitch.me/banks`).then((res) => {
+    axios.get(`https://sour-snowy-purpose.glitch.me/banks?category=${data}`).then((res) => {
 
         dispatch({ type: GET_PRODUCT_SUCCSES, payload: res.data })
 

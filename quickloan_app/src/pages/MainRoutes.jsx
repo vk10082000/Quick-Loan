@@ -24,12 +24,12 @@ export const MainRoutes = () => {
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<SignUp/>} />
 
-        <Route path="/products/:category" element={<Products/>} />
+     
 
 
 
 
-        <Route path="/banks" element={<Products/>} />
+        <Route path="/banks/:category" element={<Products/>} />
 
         <Route path="/verification" element={<Application/>} />
 
