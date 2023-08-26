@@ -54,10 +54,7 @@ export default function Application() {
     try {
       // Make a PATCH request using axios
       const response = await axios.patch(
-
-        `https://sour-snowy-purpose.glitch.me/users/${2}`,        // id should come inplace of 2
-
-
+        `https://sour-snowy-purpose.glitch.me/users/${id}`,  
         formData
       );
       console.log(response.data);
@@ -68,7 +65,7 @@ export default function Application() {
         showConfirmButton: false,
         timer: 1500
       })
-      navigate("/products");
+      navigate(`/products/${formData.category}`);
       // Reset form data
       setFormData(initalFormData);
     } catch (error) {
@@ -118,7 +115,7 @@ export default function Application() {
                       name="fullname"
                       value={fullname}
                       onChange={handleChange}
-                      placeholder="Enter your Name"
+                      placeholder="Enter your Full Name"
                       required
                     />
                   </div>
@@ -207,10 +204,10 @@ export default function Application() {
                       required
                     >
                       <option value="">Select Category of Loan</option>
-                      <option value="homeloan">Home loan</option>
-                      <option value="educationloan">Education loan</option>
-                      <option value="personalloan">Personal loan</option>
-                      <option value="businessloan">Business loan</option>
+                      <option value="Homeloan">Home loan</option>
+                      <option value="Educationloan">Education loan</option>
+                      <option value="Personalloan">Personal loan</option>
+                      <option value="Businessloan">Business loan</option>
                     </select>
                   </div>
 

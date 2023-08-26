@@ -4,21 +4,15 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getproducts } from '../redux/ProductRedux/action'
 import ProductCard from '../components/ProductCard'
-
-import Navbar from "../components/Navbar"
-
-
-
 import { SimpleGrid } from '@chakra-ui/react'
-
-
-
+import { useParams } from 'react-router-dom';
 
 export default function Products() {
   const { products, isLoading, isError } = useSelector((store) => store.ProductReducer)
   const dispatch = useDispatch()
+  const {category}=useParams()
   useEffect(() => {
-    dispatch(getproducts)
+    dispatch(getproducts(category))
   }, [])
   return (
 
