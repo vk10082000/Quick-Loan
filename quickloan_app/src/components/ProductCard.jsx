@@ -1,10 +1,11 @@
 import { Box, Button, ButtonGroup, Card, CardBody, CardFooter, CardHeader, Divider, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import {  useNavigate,  } from 'react-router-dom'
 import styled from 'styled-components';
 
 export default function ProductCard(props) {
     const {id,name,image,amount,interest,category,extra} =props
+   
     const nav = useNavigate()
   return (
    
@@ -19,9 +20,9 @@ export default function ProductCard(props) {
         align="center"
       />
       <Stack mt='6' spacing='1'>
-        <Heading size='md'>{name}</Heading>
-        <Text>Category:{category}</Text>
-        <Text>
+        <Heading size='lg '>{name}</Heading>
+        <Text size='md'><b>Category:</b>{category}</Text>
+        <Text style={{textAlign:"justify"}}>
           {extra.map((el)=>el)}
           <Text>Interest - {interest}% </Text>
         </Text>

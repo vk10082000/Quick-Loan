@@ -10,6 +10,9 @@ import {
   } from "@chakra-ui/react";
 import logo_jpg from "../Images/1.jpg"
 import { Link, NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { store } from '../redux/store';
+import { LOGIN_FAILURE, LOGIN_SUCCESS } from '../redux/Authentication/actionType';
 // import { Box,Flex,Spacer,Button,Heading, ButtonGroup} from '@chakra-ui/react'
 
 const links = [
@@ -24,11 +27,17 @@ const links = [
 
 
 const Navbar = () => {
-
+   const dispatch = useDispatch()
+    const {currentUser } = useSelector((store) => store.AuthReducer);
+    const { isAuth } = useSelector((store) => store.AuthReducer);
+    console.log(store)
+     console.log(isAuth)
+    //  console.log(currentUser.firstname);
     const [shouldElevate, setShouldElevate] = useState(false);
 
+
     let pathname=window.location.pathname;
-    
+
     useEffect(() => {
       const handleScroll = () => {
         const isScrolled = window.scrollY > 0;
@@ -41,6 +50,8 @@ const Navbar = () => {
         window.removeEventListener("scroll", handleScroll);
       };
     }, []);
+
+   
     
   return (
     <Flex
@@ -64,6 +75,7 @@ const Navbar = () => {
     transition="box-shadow 0.2s"
      boxShadow={shouldElevate ? "md" : "none"}
   >
+   
     <Box
       w={{
         base: "130px",
@@ -73,7 +85,7 @@ const Navbar = () => {
         xl: "180px",
       }}
     >
-      <Link to="/"><Image sizes='s' src={logo_jpg} alt="logo" h="70px" w="90px" p="-10px" /></Link>
+      <Link to="/"><Image sizes='s' borderRadius={"100%"} src={logo_jpg} alt="logo" h="70px" w="90px" p="-10px" /></Link>
     </Box>
     <HStack
       justify={"space-evenly"}
@@ -110,15 +122,22 @@ const Navbar = () => {
               xl: "30px",
             }}
           >
-            <Link to="/login">Login</Link>
-            <Link to="/signup">
-              <Button
+             
+            {isAuth ? <h1>{currentUser.firstname}</h1> : <Link to="/login">Login</Link>}
+         
+         
+            
+            {isAuth ? <Link to="/login"> <Button onClick={() => dispatch({ type: LOGIN_FAILURE})}>Log Out</Button></Link> : <Link to="/signup"><Button
                 size={{ base: "sm", sm: "sm", md: "md", lg: "md", xl: "md" }}
                 colorScheme={"yellow"}
               >
                 Sign Up
               </Button>
-            </Link>
+              </Link>
+              }
+              
+            {/* */}
+
           </HStack>
     }
 

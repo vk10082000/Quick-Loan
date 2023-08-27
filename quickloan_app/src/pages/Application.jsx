@@ -65,7 +65,10 @@ export default function Application() {
         showConfirmButton: false,
         timer: 1500
       })
-      navigate(`/products/${formData.category}`);
+
+
+      navigate(`/banks/${formData.category}`);
+
       // Reset form data
       setFormData(initalFormData);
     } catch (error) {

@@ -7,10 +7,14 @@ import ProductCard from '../components/ProductCard'
 import { SimpleGrid } from '@chakra-ui/react'
 import { useParams } from 'react-router-dom';
 
+
 export default function Products() {
   const { products, isLoading, isError } = useSelector((store) => store.ProductReducer)
   const dispatch = useDispatch()
+
   const {category}=useParams()
+
+
   useEffect(() => {
     dispatch(getproducts(category))
   }, [])
