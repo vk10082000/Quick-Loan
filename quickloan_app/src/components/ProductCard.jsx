@@ -24,7 +24,7 @@ export default function ProductCard(props) {
         <Text size='md'><b>Category:</b>{category}</Text>
         <Text style={{textAlign:"justify"}}>
           {extra.map((el)=>el)}
-          Interest-{interest}% 
+          <Text>Interest - {interest}% </Text>
         </Text>
         <Text color='blue.600' fontSize='2xl'>
 

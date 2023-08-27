@@ -35,7 +35,8 @@ const Navbar = () => {
     //  console.log(currentUser.firstname);
     const [shouldElevate, setShouldElevate] = useState(false);
 
-    
+
+    let pathname=window.location.pathname;
 
     useEffect(() => {
       const handleScroll = () => {
@@ -103,7 +104,14 @@ const Navbar = () => {
         </NavLink>
       ))}
     </HStack>
-
+    {pathname==='/admin'?              
+     <Button size={{ base: "sm", sm: "sm", md: "md", lg: "md", xl: "md" }}
+                colorScheme={"pink"}
+              >
+                WELCOME ADMIN
+              </Button>
+              :
+    
     <HStack
             justify={"space-evenly"}
             spacing={{
@@ -131,6 +139,7 @@ const Navbar = () => {
             {/* */}
 
           </HStack>
+    }
 
     
     </Flex>
