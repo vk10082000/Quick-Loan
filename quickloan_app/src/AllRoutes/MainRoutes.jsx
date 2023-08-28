@@ -13,6 +13,7 @@ import { BankApplication } from "../pages/BankApplication";
 import Bank from "../pages/Bank";
 import { Admin } from "../pages/Admin";
 import { BankApplicationMain } from "../components/BankApplicationMain";
+import { Profile } from "../pages/Profile";
 
 
 
@@ -34,6 +35,8 @@ export const MainRoutes = () => {
         <Route path="/admin" element={<Admin/>} />
 
         <Route path="/bank/:bankname/:id" element={<Bank/>} />
+
+        <Route path='/profile' element={<PrivateRoute><Profile /></PrivateRoute>} />
         
         <Route path='/bankApplication/:id' element={<PrivateRoute><BankApplicationMain /></PrivateRoute>} />
 

@@ -2,9 +2,8 @@ import axios from "axios"
 import { ALL_USER_ERROR, ALL_USER_REQUEST, ALL_USER_SUCCESS, BANK_DATA_ERROR, BANK_DATA_REQUEST, BANK_DATA_SUCCESS, CURRENT_USER_SUCCESS, GET_LOAN_DATA_ERROR, GET_LOAN_DATA_REQUEST, GET_LOAN_DATA_SUCCESS, LOAN_DATA_ERROR, LOAN_DATA_REQUEST, LOAN_DATA_SUCCESS } from "./actionTypes"
 
 export const handleLoanDataSubmit = (id, loans, userInfo) => (dispatch) => {
-
     dispatch({ type: LOAN_DATA_REQUEST })
-    return axios.patch(`https://sour-snowy-purpose.glitch.me/users/${id}`, { loans: [...loans, userInfo] })
+  return axios.patch(`https://sour-snowy-purpose.glitch.me/users/${id}`, { loans: [...loans, userInfo] })
         .then((res) => {
             dispatch({ type: LOAN_DATA_SUCCESS, payload: res.data.loans })
             console.log(res.data.loans)
@@ -17,7 +16,7 @@ export const handleLoanDataSubmit = (id, loans, userInfo) => (dispatch) => {
 export const getLoanData = (id) => (dispatch) => {
 
     dispatch({ type: GET_LOAN_DATA_REQUEST })
-    return axios.get(`https://sour-snowy-purpose.glitch.me/users/${id}`)
+     axios.get(`https://sour-snowy-purpose.glitch.me/users/${id}`)
         .then((res) => {
             dispatch({ type: GET_LOAN_DATA_SUCCESS, payload: res.data.loans })
             console.log("here", res.data.loans)
@@ -40,10 +39,10 @@ export const getAllUsers = () => async (dispatch) => {
     })
 }
 
-export const getCurrentUser = (id) => async (dispatch) => {
+export const getCurrentUser = (id) =>(dispatch) => {
 
     dispatch({ type: ALL_USER_REQUEST })
-    return axios.get(`https://sour-snowy-purpose.glitch.me/users/${id}`).then((res) => {
+     axios.get(`https://sour-snowy-purpose.glitch.me/users/${id}`).then((res) => {
 
         // const user = res.data.find((el) => el.id === id);
         // if (user) {

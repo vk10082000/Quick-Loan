@@ -17,12 +17,14 @@ export const BankApplicationMain = () => {
 
     const currentUser = useSelector(store => store.AuthReducer.currentUser);
     console.log('currentUser:', currentUser)
-    // const loans = useSelector(store => store.bankApplicationReducer.loans);
+
+    const loans = useSelector(store => store.bankApplicationReducer.loans);
+    console.log('loans:', loans)
+
     const dispatch = useDispatch();
     const toast = useToast();
     const location = useLocation();
     const {id}=useParams();
-    console.log('id', id)
     // const id = new URLSearchParams(location.search).get('id');
     const [alert, setAlert] = useState()
 
@@ -30,37 +32,36 @@ export const BankApplicationMain = () => {
 
     useEffect(() => {
         // dispatch(getBankData(id))
-        // dispatch(getLoanData(currentUser.id))
-        // dispatch(getCurrentUser(currentUser.id))
-        getBankData()
+        dispatch(getLoanData(currentUser.id))
+        dispatch(getCurrentUser(currentUser.id))
+        getBankData(id)
     }, [])
 
 
-    function getBankData(){
+    function getBankData(id){
         axios.get(`https://sour-snowy-purpose.glitch.me/banks/${id}`)
         .then((res)=>{
             setBankData(res.data)
         })
-        .error((err)=>{
+        .catch((err)=>{
             console.log('err:', err)
         })
     }
+   
 
-    
-
-    // const currentUserbyId = useSelector(store => store.bankApplicationReducer.currentUserbyId);
+    const currentUserbyId = useSelector(store => store.bankApplicationReducer.currentUserbyId);
     // const bankData = useSelector(store =>{
     //     console.log('bankData:', store.bankApplicationReducer.bankData)
     //     return store.bankApplicationReducer.bankData
     // });
-    // console.log("currentUserbyId", currentUserbyId);
+    console.log("currentUserbyId", currentUserbyId);
 
     const initialUserInfo = {
         id: `${Math.floor(Math.random() * (100 - 1 + 1)) + 1}`,
-        // fullname: currentUserbyId?.fullname || currentUser.firstname || "",
-        // contact: currentUserbyId?.contact || currentUser?.contact || '',
-        // email: currentUserbyId?.email || currentUser?.email || '',
-        // address: currentUserbyId?.address || currentUser?.address || '',
+        fullname: currentUserbyId?.fullname || currentUser.firstname || "",
+        contact: currentUserbyId?.contact || currentUser?.contact || '',
+        email: currentUserbyId?.email || currentUser?.email || '',
+        address: currentUserbyId?.address || currentUser?.address || '',
         employer: '',
         jobTitle: '',
         yearsOfEmployment: '',
@@ -89,7 +90,7 @@ export const BankApplicationMain = () => {
         { title: 'Fifth', description: 'Loan Specifications' },
     ]
     const [activeStep, setActiveStep] = useState(0);
-    const [userInfo, setUserInfo] = useState({});
+    const [userInfo, setUserInfo] = useState(initialUserInfo);
     const navigate = useNavigate()
 
     const handleNextStep = () => {
@@ -134,7 +135,7 @@ export const BankApplicationMain = () => {
             })
         }
         else {
-            dispatch(handleLoanDataSubmit(currentUser.id, userInfo)).then(() => {
+            dispatch(handleLoanDataSubmit(currentUser.id,loans, userInfo)).then(() => {
                 console.log("UserInformation",userInfo)
                 setUserInfo(initialUserInfo)
                 
