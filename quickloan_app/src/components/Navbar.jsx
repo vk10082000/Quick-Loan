@@ -9,7 +9,7 @@ import {
    
   } from "@chakra-ui/react";
 import logo_jpg from "../Images/1.jpg"
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { store } from '../redux/store';
 import { LOGIN_FAILURE, LOGIN_SUCCESS } from '../redux/Authentication/actionType';
@@ -34,6 +34,7 @@ const Navbar = () => {
      console.log(isAuth)
     //  console.log(currentUser.firstname);
     const [shouldElevate, setShouldElevate] = useState(false);
+    const navigate=useNavigate()
 
 
     let pathname=window.location.pathname;
@@ -123,7 +124,7 @@ const Navbar = () => {
             }}
           >
              
-            {isAuth ? <h1>{currentUser.firstname}</h1> : <Link to="/login">Login</Link>}
+            {isAuth ? <h1 style={{ cursor: 'default' }} onFocus={(e) => e.target.style.cursor = "pointer"} onClick={()=>{navigate('/profile')}}>{currentUser.firstname}</h1> : <Link to="/login">Login</Link>}
          
          
             

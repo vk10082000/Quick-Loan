@@ -40,7 +40,10 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (!logindata.email || !logindata.password) {
+    if(logindata.email==="admin123@gmail.com" && logindata.password==="admin"){
+      navigate('/admin')
+    }
+    else if (!logindata.email || !logindata.password) {
       toast({
         title: "Failed!!",
         description: "Please fill all the fields.",
