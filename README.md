@@ -20,15 +20,6 @@ Rest assured, your data is protected with the highest level of security measures
 ![](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
 
 
-
-## For Deploying
-![](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-
-
-
-- Live preview : https://money-mentor.netlify.app/
-
-
 # Features
 - Authentication
 - Check Eligibilty
