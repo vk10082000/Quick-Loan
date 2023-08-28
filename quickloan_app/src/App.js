@@ -2,9 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 import Application from './pages/Application';
-import { MainRoutes } from './pages/MainRoutes';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { MainRoutes } from './AllRoutes/MainRoutes';
 
 
 function App() {
@@ -13,7 +13,6 @@ function App() {
 
       <Navbar/>
       <MainRoutes/>
-
       <Footer/>
 
     </div>

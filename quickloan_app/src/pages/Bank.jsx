@@ -1,7 +1,7 @@
 import {  Table, TableContainer, Tbody, Td,  Th, Thead, Tr } from '@chakra-ui/react'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import styled from 'styled-components'
 import p1 from "../Images/p1.webp"
@@ -68,7 +68,9 @@ export default function Bank() {
               </div>
             </div>
             <div className='sectionC'>
-              <button>Apply</button>
+            <Link to={`/bankApplication/${id}`}>
+            <button>Apply</button>
+              </Link>  
             </div>
           </div>
           <TableContainer style={{ backgroundColor: "#ffff", boxShadow: "rgba(0, 0, 0, 0.05) 0px 0px 0px 1px",  paddingTop: "20px" }}>
